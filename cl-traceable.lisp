@@ -61,7 +61,7 @@
   #+sbcl
   (progn
     (sb-debug::print-trace-indentation)
-    (format *trace-output* "~A returned ~{~A~}~&" (or name log-name) result-list))
+    (format *trace-output* "~A returned~{ ~A~}~&" (or name log-name) result-list))
   #-sbcl(format *trace-output* "~&~A returned ~{~A~}~&" (or name log-name) result-list))
 
 (defmacro with-shown-trace ((log-name &rest log-args) &body body)
